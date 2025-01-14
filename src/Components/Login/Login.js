@@ -37,7 +37,7 @@ export default function Login({user,setUser}) {
             setUser({name:res.data.user.name,isLoggedIn:true,userType:res.data.user.userType})
         }
         else{
-            alert(res.data.message);
+            alert("Please enter valid credentials");
         }
     }).catch(err=>{
       console.log(err);
@@ -55,12 +55,12 @@ export default function Login({user,setUser}) {
                 <table >
                     <tr>
                         <td >
-                            Email :<input type="text" class="form-control "name="email" value={email}onChange={e=>onValChange(e)}/>
+                            Email :<input type="text" class="form-control " name="email" value={email} onChange={e=>onValChange(e)}/>
                         </td>
                     </tr>
                     <tr>
                       <td>
-                            Password :<input type="password" class="form-control "name="password" value={password}onChange={e=>onValChange(e)}/>
+                            Password :<input type="password" class="form-control " name="password" value={password} onChange={e=>onValChange(e)}/>
                         </td>
                     </tr>
                     <tr >
