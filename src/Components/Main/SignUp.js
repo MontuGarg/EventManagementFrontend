@@ -34,7 +34,6 @@ export default function SignUp() {
   return (<div id="loginDiv"><div id='extradiv'></div>
         <div id="registerCom">
             <h1 >REGISTER</h1>
-              <form onSubmit={()=>handleSubmit()}>
                 <table >
                     <tr>
                         <td >
@@ -54,11 +53,10 @@ export default function SignUp() {
                    <br/>
                     <tr >
                         <td colSpan={2}>
-                        <button className='btn btn-dark form-control'>Register</button>
+                        <button className='btn btn-dark form-control' onClick={()=>handleSubmit()}>Register</button>
                         </td>
                     </tr>
                     </table>
-                    </form>
                     <tr>
                         <td>
                         Already have account ? <span id='link' onClick={()=>navigate("/login")}>Login</span></td>

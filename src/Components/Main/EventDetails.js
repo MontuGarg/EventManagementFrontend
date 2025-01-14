@@ -8,7 +8,6 @@ const EventDetails = ({ user }) => {
   const navigate = useNavigate();
   const [event,setEvent]=useState({});
   useEffect(()=>{
-    console.log(id);
     axios.get(`https://eventmanagementbackend-production-a97f.up.railway.app/getEvent/${id}`).then(res=>{
       console.log(res.data);
       setEvent(res.data.event[0]);

@@ -1,9 +1,10 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 const UpdateEventDetails = ({ event }) => {
-
+ const navigate=useNavigate();
   const [updatedEvent, setUpdatedEvent] = useState({ ...event });
 
   const handleInputChange = (e) => {
@@ -20,7 +21,7 @@ const UpdateEventDetails = ({ event }) => {
     .then((res) => {
       if (res.data.message === "Event updated") {
         alert(res.data.message);
-        window.location.reload()
+        navigate("/");
       } else {
         alert(res.data.message);
         
