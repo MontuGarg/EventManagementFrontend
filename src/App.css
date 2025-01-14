@@ -1,0 +1,212 @@
+/* General styles */
+#registerCom {
+  background-color: rgba(246, 11, 11, 0.7);
+  margin-left: 35%;
+  width: 30%;
+  height: auto;
+  border: 1px solid white;
+  padding: 5%;
+  padding-left: 8%;
+  border-radius: 25px;
+}
+
+#loginDiv {
+  color: rgb(249, 245, 245);
+  width: 100vw;
+  height: 100vh;
+  background: rgb(10, 0, 0);
+}
+
+#extradiv {
+  height: 4cm;
+}
+
+#link {
+  text-decoration: none;
+  color: rgb(249, 245, 245);
+  cursor: pointer;
+}
+
+/* Home page CSS */
+
+/* Hero Section */
+.hero-section {
+  background-color: #980808;
+  padding: 60px 20px;
+  margin-bottom: 40px;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+}
+
+.card-section {
+  background-color: black;
+  color: white;
+}
+
+/* Event Cards */
+.event-card {
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 4px 6px rgba(248, 248, 248, 0.636);
+  transition: transform 0.2s ease-in-out;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+.event-card .card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.event-card .btn {
+  background-color: #cf0606;
+  border-color: #cf0606;
+}
+
+.event-card .btn:hover {
+  background-color: #a61818;
+  border-color: #ac1d1d;
+}
+
+/* Event Image */
+.event-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #878282;
+}
+
+.details {
+  padding-top: 5vh;
+  min-height: 100vh;
+  padding-bottom: 5vh;
+}
+
+/* Footer Section */
+.footer-section {
+  background-color: #b21515;
+  color: #fff;
+  margin-top: 40px;
+}
+
+.description {
+  height: 100px;
+}
+
+.delete {
+  position: absolute;
+  right: 0;
+  margin-right: 8%;
+}
+
+.login-btn {
+  position: absolute;
+  right: 0;
+  margin: 15px 25px;
+}
+
+.login-btn a {
+  text-decoration: none;
+  color: rgb(249, 245, 245);
+}
+
+.user-name {
+  position: absolute;
+  margin: 22px 100px;
+  font-size: large;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+
+#update-details {
+  background: rgb(220, 219, 219, 0.2);
+  color: white;
+}
+
+/* Responsive CSS */
+
+/* For screens smaller than 768px (Tablets and below) */
+@media (max-width: 768px) {
+  #registerCom {
+    margin-left: 10%;
+    width: 80%;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .event-card {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .event-image {
+    height: 150px;
+  }
+
+  .login-btn {
+    margin: 10px 15px;
+  }
+
+  .user-name {
+    font-size: medium;
+    margin: 15px 50px;
+  }
+}
+
+/* For screens smaller than 480px (Mobile devices) */
+@media (max-width: 480px) {
+  #registerCom {
+    margin-left: 5%;
+    width: 90%;
+  }
+
+  .hero-section {
+    padding: 40px 10px;
+  }
+
+  .hero-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-section p {
+    font-size: 0.9rem;
+  }
+
+  .event-card {
+    margin-bottom: 25px;
+  }
+
+  .event-image {
+    height: 150px;
+  }
+
+  .details {
+    padding-top: 5vh;
+    min-height: 100vh;
+  }
+
+  .user-name {
+    font-size: small;
+    margin: 10px 20px;
+  }
+
+  .login-btn {
+    margin: 5px 10px;
+  }
+}
