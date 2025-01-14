@@ -72,7 +72,7 @@ export default function Login({user,setUser}) {
                     
                     <tr>
                         <td>
-                        Not registered ? <a href='register' id='link'>Register</a></td>
+                        Not registered ? <a href='signup' id='link'>Register</a></td>
                     </tr>
                     <tr>
                         <td>
