@@ -63,10 +63,6 @@ export default function Register() {
                         <td>
                         Already have account ? <a href='login' id='link'>Login</a></td>
                     </tr>
-                
-                
-            
-
         </div></div>
   )
 }
