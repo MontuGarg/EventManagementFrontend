@@ -61,7 +61,7 @@ export default function SignUp() {
                     </form>
                     <tr>
                         <td>
-                        Already have account ? <a href='login' id='link'>Login</a></td>
+                        Already have account ? <span id='link' onClick={()=>navigate("/login")}>Sign Up</span></td>
                     </tr>
         </div></div>
   )
