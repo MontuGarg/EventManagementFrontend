@@ -10,7 +10,7 @@ The Event Management System (EMS) is a web-based application designed to manage 
 - **Event Creation:** Users can create new events with details such as date, image, and event description.
 - **Event Management:** Users can manage events they have created (edit, update, or delete).
 - **Limited Guest Access:** Guests can only view event details but cannot interact with or manage events.
-
+- 
 ## Technologies Used
 - **Frontend:** HTML, CSS, JavaScript (React.js)
 - **Backend:** Node.js, Express.js
@@ -27,6 +27,6 @@ The Event Management System (EMS) is a web-based application designed to manage 
 ### Installation Steps:
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   [git clone <repository-url>](https://github.com/MontuGarg/EventManagementFrontend.git)
 
    
