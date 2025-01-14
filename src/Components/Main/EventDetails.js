@@ -49,7 +49,7 @@ const EventDetails = ({ user }) => {
         <img
           src={event.image}
           alt={event.name}
-          className="card-img-top event-image"
+          className="card-img-top event-image1"
         />
         <div className="card-body">
           <h3 className="card-title">{event.name}</h3>

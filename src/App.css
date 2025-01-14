@@ -84,6 +84,12 @@
   object-fit: cover;
   border-bottom: 1px solid #878282;
 }
+.event-image1 {
+  width: 95%;
+  height: 380px;
+  object-fit: cover;
+  border-bottom: 1px solid #878282;
+}
 
 .details {
   padding-top: 5vh;

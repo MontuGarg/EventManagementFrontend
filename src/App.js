@@ -5,7 +5,7 @@ import Home from './Components/Main/Home';
 import EventDetails from './Components/Main/EventDetails';
 import { useEffect, useState } from 'react';
 import CreateEvent from './Components/Main/CreateEvent';
-import Register from './Components/Login/Register';
+import Register from './Components/Main/Register';
 import Login from './Components/Login/Login';
 
 function App() {
