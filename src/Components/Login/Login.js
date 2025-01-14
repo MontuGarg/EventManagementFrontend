@@ -41,6 +41,8 @@ export default function Login({user,setUser}) {
         }
     }).catch(err=>{
       console.log(err);
+      alert("Please enter valid credentials");
+      setUser1({ email:"", password:"" })
     })
     }
     else{
@@ -55,12 +57,12 @@ export default function Login({user,setUser}) {
                 <table >
                     <tr>
                         <td >
-                            Email :<input type="text" class="form-control " name="email" value={email} onChange={e=>onValChange(e)}/>
+                            Email :<input type="email" class="form-control " name="email" value={email} onChange={e=>onValChange(e) } required/>
                         </td>
                     </tr>
                     <tr>
                       <td>
-                            Password :<input type="password" class="form-control " name="password" value={password} onChange={e=>onValChange(e)}/>
+                            Password :<input type="password" class="form-control " name="password" value={password} onChange={e=>onValChange(e)} required/>
                         </td>
                     </tr>
                     <tr >
