@@ -13,7 +13,7 @@ export default function Register() {
     setUser({...user,[e.target.name]:e.target.value});
   }
   const handleSubmit=()=>{
-    if(user.name && user.email,user.password){
+    if(user.name && user.email&&user.password){
     const a={
       name:user.name,
       email:user.email,
