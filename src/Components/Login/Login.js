@@ -72,7 +72,7 @@ export default function Login({user,setUser}) {
                     
                     <tr>
                         <td>
-                        Not registered ? <a href='signup' id='link'>Register</a></td>
+                        Not registered ? <span id='link' onClick={()=>navigate("/signup")}>Sign Up</span></td>
                     </tr>
                     <tr>
                         <td>
