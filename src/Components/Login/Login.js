@@ -12,14 +12,17 @@ export default function Login({user,setUser}) {
     setUser1({...user1,[e.target.name]:e.target.value});
   }
   const handleGuestLogin=()=>{
+    let randomInt = Math.floor(Math.random() * (9999999999999999 - 10000000000000 + 1)) + 10000000000000;
+    
     let user2={
       name:"guest",
       userType:"guest",
+      _id:randomInt
     }
     sessionStorage.setItem("LoginUser",JSON.stringify(user2));
     navigate("/");
     window.location.reload();
-    setUser({name:"guest",isLoggedIn:true,userType:"guest"})
+    setUser({name:"guest",isLoggedIn:true,userType:"guest",id:randomInt})
   }
   const handleSubmit=()=>{
     
@@ -29,12 +32,14 @@ export default function Login({user,setUser}) {
       password:user1.password
     }
     axios.post("https://eventmanagementbackend-production-a97f.up.railway.app/login",a).then(res=>{
-        console.log(res.data);
+        
         if(res.data.message==="Login Successful"){
             sessionStorage.setItem("LoginUser",JSON.stringify(res.data.user));
+            let id=res.data.user._id;
+            
             navigate("/");
             window.location.reload();
-            setUser({name:res.data.user.name,isLoggedIn:true,userType:res.data.user.userType})
+            setUser({name:res.data.user.name,isLoggedIn:true,userType:res.data.user.userType,id})
         }
         else{
             alert("Please enter valid credentials");
@@ -42,7 +47,7 @@ export default function Login({user,setUser}) {
     }).catch(err=>{
       console.log(err);
       alert("Please enter valid credentials");
-      setUser1({ email:"", password:"" })
+      
     })
     }
     else{

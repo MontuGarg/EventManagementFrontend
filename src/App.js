@@ -13,13 +13,15 @@ function App() {
   const [user, setUser] = useState({
     name:"",
     isLoggedIn: false,  
-    userType: "",  // "guest" or "user"
+    userType: "",// "guest" or "user" 
+    id:null 
   });
   useEffect(()=>{
       let LoginUser=JSON.parse(sessionStorage.getItem("LoginUser"));
       let length=sessionStorage.length;
-      if(length>0 ){
-        setUser({name:LoginUser.name,isLoggedIn:true,userType:LoginUser.userType});
+      if(length>0){
+        let id=LoginUser._id;
+        setUser({name:LoginUser.name,isLoggedIn:true,userType:LoginUser.userType,id});
       }
   },[])
   const LogOut=()=>{

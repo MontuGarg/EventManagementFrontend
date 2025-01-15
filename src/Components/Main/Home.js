@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Home = ({user}) => {
-  console.log(user);
   const navigate = useNavigate();
 
  const [events,setEvents]=useState({});
@@ -15,7 +14,7 @@ const Home = ({user}) => {
 
 useEffect(()=>{
   axios.get("https://eventmanagementbackend-production-a97f.up.railway.app/getEvents").then(res=>{
-    console.log(res.data);
+    
     setEvents(res.data.events);
   })
 },[])
@@ -123,6 +122,9 @@ useEffect(()=>{
                     <p className="card-text">
                       <strong>Category:</strong> {event.category}
                     </p>
+                    <p>
+                      <strong>Attendees Count:</strong> {event.attendees}
+                    </p>
                     <button
                       className="btn btn-primary"
                       onClick={() => navigate(`/events/${event._id}`)}
@@ -158,6 +160,9 @@ useEffect(()=>{
                     </p>
                     <p className="card-text">
                       <strong>Category:</strong> {event.category}
+                    </p>
+                    <p>
+                      <strong>Attendees Count:</strong> {event.attendees}
                     </p>
                     <button
                       className="btn btn-primary"
