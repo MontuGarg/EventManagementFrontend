@@ -3,10 +3,6 @@ import { useParams, useNavigate } from "react-router-dom";
 import UpdateEventDetails from "./UpdateEventDetails";
 import axios from "axios";
 import io from "socket.io-client";
-import { background } from "@cloudinary/url-gen/qualifiers/focusOn";
-import { color } from "@cloudinary/url-gen/qualifiers/background";
-import { BackgroundColor } from "@cloudinary/url-gen/actions/background/actions/BackgroundColor";
-
 const EventDetails = ({ user }) => {
   const { id } = useParams();
   const navigate = useNavigate();
