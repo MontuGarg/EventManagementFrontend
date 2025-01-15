@@ -3,6 +3,9 @@ import { useParams, useNavigate } from "react-router-dom";
 import UpdateEventDetails from "./UpdateEventDetails";
 import axios from "axios";
 import io from "socket.io-client";
+import { background } from "@cloudinary/url-gen/qualifiers/focusOn";
+import { color } from "@cloudinary/url-gen/qualifiers/background";
+import { BackgroundColor } from "@cloudinary/url-gen/actions/background/actions/BackgroundColor";
 
 const EventDetails = ({ user }) => {
   const { id } = useParams();
@@ -73,7 +76,7 @@ const EventDetails = ({ user }) => {
   };
 
   if (!event.name) {
-    return <h2 className="text-center mt-5">Event not found</h2>;
+    return <div className="loading"><h2 className="text-center mt-5 ">Please wait...</h2></div>;
   }
 
   return (
