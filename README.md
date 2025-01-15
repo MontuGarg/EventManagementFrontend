@@ -10,12 +10,14 @@ The Event Management System (EMS) is a web-based application designed to manage 
 - **Event Creation:** Users can create new events with details such as date, image, and event description.
 - **Event Management:** Users can manage events they have created (edit, update, or delete).
 - **Limited Guest Access:** Guests can only view event details but cannot interact with or manage events.
-- 
+- **Real-time Attendee Count:** The attendee count for each event is updated in real-time. When a new user opens an event, the number of attendees is automatically updated across all connected users.
+
 ## Technologies Used
 - **Frontend:** HTML, CSS, JavaScript (React.js)
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB
 - **Image Storage:** Cloudinary (for storing event images)
+- **Real-time Updates:** Socket.io (for real-time attendee count updates)
 
 ## Setup Instructions
 
